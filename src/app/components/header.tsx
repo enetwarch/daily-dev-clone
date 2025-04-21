@@ -5,8 +5,8 @@ import Image from "next/image";
 function Header(): React.ReactNode {
   return (
     <>
-      <div className="h-5 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)]" />
-      <div className="w-full sm:px-2 flex justify-center">
+      <div className="h-5 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)] z-5" />
+      <div className="w-full sm:px-2 flex justify-center z-5">
         <header className="rounded-2xl bg-[rgba(0,0,0,0.1)] p-2 sm:pl-4 lg:pl-6 max-w-[1250px] w-full flex justify-between items-center fixed">
           <a href="/" title="Home">
             <Image src="/logo.svg" alt="Logo" width="150" height="75" />
