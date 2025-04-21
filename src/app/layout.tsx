@@ -4,7 +4,7 @@ import Header from "@/app/components/header";
 
 import type { Metadata } from "next";
 import type { NextFontWithVariable } from "next/dist/compiled/@next/font";
-import { Open_Sans, Poppins, Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import type React from "react";
 
@@ -18,21 +18,9 @@ const metadata: Metadata = {
   },
 };
 
-const openSans: NextFontWithVariable = Open_Sans({
-  variable: "--font-open-sans",
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
-
 const poppins: NextFontWithVariable = Poppins({
   variable: "--font-poppins",
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
-
-const roboto: NextFontWithVariable = Roboto({
-  variable: "--font-roboto",
-  weight: ["400", "700"],
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
 });
 
@@ -43,11 +31,9 @@ type RootLayoutProps = Readonly<{
 function RootLayout({ children }: RootLayoutProps): React.ReactNode {
   return (
     <html lang="en">
-      <body
-        className={`${openSans.variable} ${poppins.variable} ${roboto.variable} antialiased min-h-screen flex flex-col items-center`}
-      >
+      <body className={`${poppins.variable} antialiased min-h-screen flex flex-col items-center`}>
         <Header />
-        <main className="grow flex flex-col items-center">{children}</main>
+        <main className="grow flex flex-col items-center w-full">{children}</main>
       </body>
     </html>
   );
