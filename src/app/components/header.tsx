@@ -4,16 +4,16 @@ import Image from "next/image";
 
 function Header(): React.ReactNode {
   return (
-    <>
-      <div className="h-5 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)] z-5" />
-      <div className="w-full sm:px-2 flex justify-center z-5">
-        <header className="rounded-2xl bg-[rgba(0,0,0,0.1)] p-2 sm:pl-4 lg:pl-6 max-w-[1250px] w-full flex justify-between items-center fixed">
+    <div className="w-full fixed z-5">
+      <div className="h-5 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)]" />
+      <div className="w-full sm:px-2 flex justify-center">
+        <header className="rounded-2xl bg-[rgba(0,0,0,0.1)] p-2 sm:pl-4 lg:pl-6 max-w-[1250px] w-full flex justify-between items-center">
           <a href="/" title="Home">
             <Image src="/logo.svg" alt="Logo" width="150" height="75" />
           </a>
           <a
             href="https://chromewebstore.google.com/detail/dailydev-the-homepage-dev/jlmpjdjjbgclbocgajdjefcidcncaied"
-            title="Chrome Extension"
+            title="Download Chrome Extension"
             target="_blank"
             rel="noreferrer"
             className="border border-white bg-transparent py-3 px-6 rounded-xl font-poppins text-foreground
@@ -29,7 +29,7 @@ function Header(): React.ReactNode {
           </a>
         </header>
       </div>
-    </>
+    </div>
   );
 }
 
