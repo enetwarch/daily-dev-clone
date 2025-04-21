@@ -9,10 +9,10 @@ function Hero(): React.ReactNode {
       className="px-4 pt-32 flex flex-col w-full items-center relative overflow-hidden"
     >
       <div className="flex flex-col z-1 gap-4 sm:gap-6 lg:gap-8 items-center">
-        <h1 className="flex flex-col items-center font-poppins text-nowrap">
+        <h1 className="flex flex-col items-center font-poppins text-center lg:text-nowrap">
           <span className="text-2xl sm:text-3xl lg:text-5xl">Where developers</span>
           <strong
-            className="text-4xl sm:text-5xl lg:text-7xl bg-gradient-to-r from-purple-500 via-pink-400 to-pink-300
+            className="text-3xl sm:text-5xl lg:text-7xl bg-gradient-to-r from-purple-500 via-pink-400 to-pink-300
             text-transparent bg-clip-text leading-12 sm:leading-16 lg:leading-24"
           >
             suffer together
@@ -45,26 +45,27 @@ function Hero(): React.ReactNode {
         <div className="rounded-t-xl shadow-[0_0_1rem_1rem_#2e389f]">
           <Image
             src="/hero-desktop-view.webp"
-            alt="daily.dev on Desktop View"
+            alt="Desktop View"
             width="1000"
             height="500"
             className="rounded-t-xl hidden lg:inline-block"
           />
           <Image
             src="/hero-tablet-view.webp"
-            alt="daily.dev on Tablet View"
+            alt="Tablet View"
             width="750"
             height="572"
             className="rounded-t-xl hidden sm:inline-block lg:hidden"
           />
           <Image
             src="/hero-mobile-view.webp"
-            alt="daily.dev on Mobile View"
+            alt="Mobile View"
             width="400"
             height="400"
             className="rounded-t-xl inline-block sm:hidden"
           />
         </div>
+        <figcaption className="sr-only">Different daily.dev viewports.</figcaption>
       </figure>
       <div className="bg-linear-[to_bottom,transparent_70%,#711f90] absolute bottom-0 h-full w-full" />
     </section>
