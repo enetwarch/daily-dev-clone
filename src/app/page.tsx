@@ -1,5 +1,11 @@
+import Hero from "@/app/components/hero";
+
 function Home(): React.ReactNode {
-  return <>...</>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 
 export default Home;
