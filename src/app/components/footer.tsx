@@ -4,7 +4,7 @@ import type React from "react";
 export default function Footer(): React.ReactNode {
   return (
     <footer className="border-t border-t-purple-400 w-full flex justify-center">
-      <div className="flex flex-col w-full max-w-[1200px] justify-between px-10 sm:px-12 items-center">
+      <div className="flex flex-col w-full max-w-[1300px] justify-between px-10 sm:px-12 items-center">
         <div
           className="w-full py-16 flex gap-16 lg:gap-8 flex-col lg:flex-row items-center 
           lg:items-start lg:justify-between"

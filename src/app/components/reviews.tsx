@@ -4,7 +4,7 @@ export default function Reviews(): React.ReactNode {
   return (
     <section aria-label="Reviews Section" className="w-full flex justify-center">
       <div
-        className="max-w-[1200px] w-full flex grow flex-col items-center gap-8 lg:gap-4 lg:justify-between lg:flex-row
+        className="max-w-[1300px] w-full flex grow flex-col items-center gap-8 lg:gap-4 lg:justify-between lg:flex-row
         py-16 px-8 lg:px-12"
       >
         <div className="w-full lg:min-w-[300px] max-w-[550px] flex flex-col items-center lg:items-normal gap-8 lg:pt-8">
@@ -19,19 +19,19 @@ export default function Reviews(): React.ReactNode {
             className="flex flex-wrap gap-8 items-center justify-center lg:justify-start"
           >
             <li>
-              <Image src="/apple-logo.svg" alt="Apple" width={27} height={25} />
+              <Image src="/apple-logo.svg" alt="Apple logo" width={27} height={25} />
             </li>
             <li>
-              <Image src="/google-logo.svg" alt="Google" width={70} height={25} />
+              <Image src="/google-logo.svg" alt="Google logo" width={70} height={25} />
             </li>
             <li>
-              <Image src="/aws-logo.svg" alt="AWS" width={50} height={25} />
+              <Image src="/aws-logo.svg" alt="AWS logo" width={50} height={25} />
             </li>
             <li>
-              <Image src="/microsoft-logo.svg" alt="Microsoft" width={150} height={25} />
+              <Image src="/microsoft-logo.svg" alt="Microsoft logo" width={150} height={25} />
             </li>
             <li>
-              <Image src="/meta-logo.svg" alt="META" width={100} height={25} />
+              <Image src="/meta-logo.svg" alt="META logo" width={100} height={25} />
             </li>
           </ul>
         </div>
