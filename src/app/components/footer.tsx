@@ -49,7 +49,7 @@ export default function Footer(): React.ReactNode {
           </div>
           <nav
             aria-label="Main Navigation"
-            className="flex justify-around gap-12 lg:justify-between w-full lg:w-[450px] flex-col sm:flex-row"
+            className="flex justify-around gap-12 lg:justify-between w-full lg:w-[450px] flex-col xs:flex-row"
           >
             <ul className="flex flex-col gap-2">
               <NavHeader>Product</NavHeader>
@@ -85,10 +85,10 @@ export default function Footer(): React.ReactNode {
           border-t-neutral-800 gap-8 lg:gap-0 pt-10 pb-10 sm:pb-16 lg:pb-10"
         >
           <div className="flex flex-col lg:justify-end gap-4 lg:gap-2">
-            <p className="font-poppins text-sm opacity-50 text-left sm:text-center lg:text-right">
+            <p className="font-poppins text-sm opacity-50 text-left xs:text-center lg:text-right">
               Working remotely wherever we're happiest
             </p>
-            <p className="text-3xl text-left sm:text-center lg:text-right">🇮🇱 🇮🇹 🇳🇱 🇬🇧 🇭🇷 🇱🇹 🇦🇺 🇵🇱 🇳🇴 🇦🇱 🇵🇹</p>
+            <p className="text-3xl text-left xs:text-center lg:text-right">🇮🇱 🇮🇹 🇳🇱 🇬🇧 🇭🇷 🇱🇹 🇦🇺 🇵🇱 🇳🇴 🇦🇱 🇵🇹</p>
           </div>
           <nav
             aria-label="Policy Navigation"
