@@ -1,7 +1,7 @@
 import Hero from "@/app/components/hero";
 import Reviews from "@/app/components/reviews";
 
-function Home(): React.ReactNode {
+export default function Home(): React.ReactNode {
   return (
     <>
       <Hero />
@@ -9,5 +9,3 @@ function Home(): React.ReactNode {
     </>
   );
 }
-
-export default Home;

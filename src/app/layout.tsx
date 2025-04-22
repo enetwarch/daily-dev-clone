@@ -9,7 +9,7 @@ import { Open_Sans, Poppins } from "next/font/google";
 
 import type React from "react";
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "daily.dev | Where developers suffer together",
   description:
     "daily.dev is the open-source professional network developers deserve. Get free access to unlimited amounts of quality knowledge from all over the web every day.",
@@ -35,7 +35,7 @@ type RootLayoutProps = Readonly<{
   children: React.ReactNode;
 }>;
 
-function RootLayout({ children }: RootLayoutProps): React.ReactNode {
+export default function RootLayout({ children }: RootLayoutProps): React.ReactNode {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${openSans.variable} antialiased min-h-screen flex flex-col items-center`}>
@@ -46,6 +46,3 @@ function RootLayout({ children }: RootLayoutProps): React.ReactNode {
     </html>
   );
 }
-
-export { metadata };
-export default RootLayout;

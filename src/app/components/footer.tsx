@@ -4,7 +4,7 @@ import type React from "react";
 export default function Footer(): React.ReactNode {
   return (
     <footer className="border-t border-t-purple-400 w-full flex justify-center">
-      <div className="flex flex-col w-full max-w-[1200px] px-10 sm:px-12 items-center">
+      <div className="flex flex-col w-full max-w-[1200px] justify-between px-10 sm:px-12 items-center">
         <div
           className="w-full py-16 flex gap-16 lg:gap-8 flex-col lg:flex-row items-center 
           lg:items-start lg:justify-between"
@@ -95,7 +95,7 @@ export default function Footer(): React.ReactNode {
             className="flex items-center lg:justify-end flex-col sm:flex-row-reverse gap-6 sm:gap-0"
           >
             <ul className="flex">
-              <NavLink href="https://tinyurl.com/3zdyv2z4" className="pr-6 lg:pl-6">
+              <NavLink href="https://tinyurl.com/3zdyv2z4" className="pr-6 sm:pl-6">
                 Terms
               </NavLink>
               <NavLink href="https://tinyurl.com/jhn7bau4" className="px-6 border-x border-x-neutral-600">
