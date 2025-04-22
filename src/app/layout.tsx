@@ -1,10 +1,11 @@
 import "@/app/globals.css";
 
+import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
 
 import type { Metadata } from "next";
 import type { NextFontWithVariable } from "next/dist/compiled/@next/font";
-import { Poppins } from "next/font/google";
+import { Open_Sans, Poppins } from "next/font/google";
 
 import type React from "react";
 
@@ -24,6 +25,12 @@ const poppins: NextFontWithVariable = Poppins({
   subsets: ["latin"],
 });
 
+const openSans: NextFontWithVariable = Open_Sans({
+  variable: "--font-open-sans",
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
 }>;
@@ -31,9 +38,10 @@ type RootLayoutProps = Readonly<{
 function RootLayout({ children }: RootLayoutProps): React.ReactNode {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased min-h-screen flex flex-col items-center`}>
+      <body className={`${poppins.variable} ${openSans.variable} antialiased min-h-screen flex flex-col items-center`}>
         <Header />
-        <main className="grow flex flex-col items-center w-full">{children}</main>
+        <main className="grow flex flex-col items-center w-full pt-32">{children}</main>
+        <Footer />
       </body>
     </html>
   );

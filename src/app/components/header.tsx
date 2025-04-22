@@ -6,10 +6,10 @@ function Header(): React.ReactNode {
   return (
     <div className="w-full fixed z-5">
       <div className="h-5 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)]" />
-      <div className="w-full sm:px-2 flex justify-center">
-        <header className="rounded-2xl bg-[rgba(0,0,0,0.1)] p-2 sm:pl-4 lg:pl-6 max-w-[1250px] w-full flex justify-between items-center">
+      <header className="w-full sm:px-2 flex justify-center">
+        <nav className="rounded-2xl bg-[rgba(0,0,0,0.1)] p-2 sm:pl-4 lg:pl-6 max-w-[1250px] w-full flex justify-between items-center">
           <a href="/" title="Home">
-            <Image src="/logo.svg" alt="Logo" width="150" height="75" />
+            <Image src="/daily-dev.svg" alt="Logo" width="150" height="75" />
           </a>
           <a
             href="https://chromewebstore.google.com/detail/dailydev-the-homepage-dev/jlmpjdjjbgclbocgajdjefcidcncaied"
@@ -27,8 +27,8 @@ function Header(): React.ReactNode {
               <strong className="font-bold">Get it now</strong>
             </p>
           </a>
-        </header>
-      </div>
+        </nav>
+      </header>
     </div>
   );
 }

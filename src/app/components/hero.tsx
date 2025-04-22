@@ -4,10 +4,7 @@ import Image from "next/image";
 
 function Hero(): React.ReactNode {
   return (
-    <section
-      aria-label="Hero Section"
-      className="px-4 pt-32 flex flex-col w-full items-center relative overflow-hidden"
-    >
+    <section aria-label="Hero Section" className="px-4 flex flex-col w-full items-center relative overflow-hidden">
       <div className="flex flex-col z-1 gap-4 sm:gap-6 lg:gap-8 items-center">
         <h1 className="flex flex-col items-center font-poppins text-center lg:text-nowrap">
           <span className="text-2xl sm:text-3xl lg:text-5xl">Where developers</span>
