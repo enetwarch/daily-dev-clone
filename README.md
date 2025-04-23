@@ -9,3 +9,7 @@ This is a practice project that aims to clone [daily.dev](https://daily.dev/). T
 * [Tailwind CSS](https://tailwindcss.com/): A CSS framework that helps eliminate one of the hardest things in programming: naming things. It comes with many utility classes for inlining your styles.
 * [Next.js](https://nextjs.org/): A full-stack web development framework made by Vercel. It has useful features like server-side rendering and SEO optimization.
 * [Vercel](https://vercel.com/): Hosting platform that easily integrates Next.js.
+
+### License
+
+* [MIT License](LICENSE)
