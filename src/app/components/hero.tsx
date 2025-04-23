@@ -1,9 +1,21 @@
-import Image from "next/image";
+"use client";
 
-export default function Hero(): React.ReactNode {
+import Image from "next/image";
+import type React from "react";
+
+type HeroProps = {
+  children?: React.ReactNode;
+};
+
+export default function Hero({ children }: HeroProps): React.ReactNode {
   return (
     <section aria-label="Hero Section" className="px-4 flex flex-col w-full items-center relative overflow-hidden">
-      <div className="flex flex-col z-1 gap-4 sm:gap-6 lg:gap-8 items-center">
+      <div className="absolute bottom-0 h-[90%] w-[90%] xs:h-[95%] xs:w-[95%] sm:h-full sm:w-full pointer-events-none">
+        <Image src="/stars-bg.svg" alt="Stars Background" fill className="-z-2" />
+        <Image src="/space-bg.svg" alt="Space Background" fill className="-z-1" />
+      </div>
+      <div className="absolute pointer-events-none h-full w-full bg-linear-[to_bottom,transparent_70%,#711f90] bottom-0 z-1" />
+      <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 items-center pb-24">
         <h1 className="flex flex-col items-center font-poppins text-center lg:text-nowrap">
           <span className="text-2xl sm:text-3xl lg:text-5xl">Where developers</span>
           <strong
@@ -36,33 +48,7 @@ export default function Hero(): React.ReactNode {
           </div>
         </a>
       </div>
-      <figure className="px-4 pt-24">
-        <div className="rounded-t-xl shadow-[0_0_1rem_1rem_#2e389f]">
-          <Image
-            src="/hero-desktop-view.webp"
-            alt="Desktop View"
-            width={1000}
-            height={500}
-            className="rounded-t-xl hidden lg:inline-block"
-          />
-          <Image
-            src="/hero-tablet-view.webp"
-            alt="Tablet View"
-            width={750}
-            height={572}
-            className="rounded-t-xl hidden sm:inline-block lg:hidden"
-          />
-          <Image
-            src="/hero-mobile-view.webp"
-            alt="Mobile View"
-            width={400}
-            height={400}
-            className="rounded-t-xl inline-block sm:hidden"
-          />
-        </div>
-        <figcaption className="sr-only">Different daily.dev viewports.</figcaption>
-      </figure>
-      <div className="bg-linear-[to_bottom,transparent_70%,#711f90] absolute bottom-0 h-full w-full" />
+      {children}
     </section>
   );
 }

@@ -10,15 +10,17 @@ export default function Footer(): React.ReactNode {
           lg:items-start lg:justify-between"
         >
           <div className="max-w-[500px] flex flex-col gap-6">
-            <a href="/" title="Home" className="flex justify-center lg:justify-start">
-              <Image src="/daily-dev.svg" alt="Logo" width={150} height={75} />
-            </a>
-            <p className="opacity-50 text-lg font-poppins text-center lg:text-start">
+            <div className="flex justify-start xs:justify-center lg:justify-start">
+              <a href="/" title="Home">
+                <Image src="/daily-dev.svg" alt="Logo" width={150} height={75} />
+              </a>
+            </div>
+            <p className="opacity-50 text-lg font-poppins text-left xs:text-center lg:text-left">
               daily.dev is a professional network for developers to learn, collaborate, and grow together.
             </p>
             <nav
               aria-label="Download Navigation"
-              className="flex gap-4 max-height-50 items-center justify-center lg:justify-start"
+              className="flex gap-4 max-height-50 items-center justify-start xs:justify-center lg:justify-start"
             >
               <a href="https://tinyurl.com/2zpjak5c" title="App Store" target="_blank" rel="noreferrer">
                 <Image src="/download-on-the-app-store.svg" alt="Download on the App Store" width={170} height={50} />
@@ -28,7 +30,7 @@ export default function Footer(): React.ReactNode {
               </a>
             </nav>
             <nav aria-label="Platform Navigation" className="pt-4">
-              <ul className="flex items-center gap-4 justify-center lg:justify-start">
+              <ul className="flex items-center gap-4 justify-start xs:justify-center lg:justify-start">
                 <PlatformLink href="https://tinyurl.com/25v9xe2u" title="daily.dev">
                   <PlatformLogo src="/daily-dev-logo.svg" alt="daily.dev logo" size={40} />
                 </PlatformLink>
@@ -88,7 +90,7 @@ export default function Footer(): React.ReactNode {
             <p className="font-poppins text-sm opacity-50 text-left xs:text-center lg:text-right">
               Working remotely wherever we're happiest
             </p>
-            <p className="text-3xl text-left xs:text-center lg:text-right">🇮🇱 🇮🇹 🇳🇱 🇬🇧 🇭🇷 🇱🇹 🇦🇺 🇵🇱 🇳🇴 🇦🇱 🇵🇹</p>
+            <p className="text-3xl text-left xs:text-center lg:text-right">🇮🇱 🇮🇹 🇵🇭 🇳🇱 🇬🇧 🇭🇷 🇱🇹 🇦🇺 🇵🇱 🇳🇴 🇦🇱 🇵🇹</p>
           </div>
           <nav
             aria-label="Policy Navigation"
