@@ -1,4 +1,4 @@
-# Clone daily.dev
+# Clone of daily.dev
 
 This is a practice project that aims to clone [daily.dev](https://daily.dev/). This clone copies the layout and design of the website, but it does not fully copy it in a pixel perfect manner. A non-vanilla tech stack was used in the project to help me get used to each of them.
 
