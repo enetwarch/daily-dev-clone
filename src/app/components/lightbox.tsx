@@ -7,7 +7,7 @@ export default function Lightbox(): React.ReactNode {
   const [open, setOpen] = useState<boolean>(false);
   const dialog = useRef<HTMLDialogElement>(null);
 
-  const handleEscapeKeyup = useCallback((event: KeyboardEvent): void => {
+  const handleEscapeKeydown = useCallback((event: KeyboardEvent): void => {
     if (event.code !== "Escape") return;
     setOpen(false);
   }, []);
@@ -22,16 +22,16 @@ export default function Lightbox(): React.ReactNode {
 
     if (open) {
       document.addEventListener("click", handleOverlayClick);
-      document.addEventListener("keydown", handleEscapeKeyup);
+      document.addEventListener("keydown", handleEscapeKeydown);
 
       dialog.current.showModal();
     } else {
       document.removeEventListener("click", handleOverlayClick);
-      document.removeEventListener("keydown", handleEscapeKeyup);
+      document.removeEventListener("keydown", handleEscapeKeydown);
 
       dialog.current.close();
     }
-  }, [open, handleEscapeKeyup, handleOverlayClick]);
+  }, [open, handleEscapeKeydown, handleOverlayClick]);
 
   useEffect((): void => {
     if (!dialog.current) return;
@@ -58,7 +58,7 @@ export default function Lightbox(): React.ReactNode {
           type="button"
           aria-haspopup="dialog"
           className="rounded-t-xl shadow-[0_0_1rem_1rem_#2e389f] hover:cursor-pointer relative object-fill flex 
-          justify-center overflow-visible"
+          justify-center overflow-visible bg-[#2e389f]"
           onClick={() => setOpen(true)}
         >
           <div className="absolute top-[0] -translate-y-2/5 h-[120px] w-[120px] sm:h-[160px] sm:w-[160px]">
