@@ -9,6 +9,9 @@ This is a practice project that aims to clone [Daily.dev](https://daily.dev/). T
 - [ ] [Blog | daily.dev](https://daily-dev-clone-enetwarch.vercel.app/blog): Go behind the scenes of building daily.dev with our engineering blog. Explore deep dives into our tech stack, architecture decisions, and coding practices. Get insights from our developers on the challenges and triumphs of creating a platform for millions of developers.
 - [ ] [About us](https://daily-dev-clone-enetwarch.vercel.app/about-us): daily.dev is a thriving professional network for developers. We're empowering developers with the tools, knowledge, and community to shape the future. daily.dev is a hub for growth, innovation, and creativity in the evolving world of development
 - [ ] [Contact us](https://daily-dev-clone-enetwarch.vercel.app/contact): Contact our team · Customer support daily.dev platforms
+- [ ] [Terms of Service | daily.dev](https://daily-dev-clone-enetwarch.vercel.app/tos): Understand the obligations and rights under daily.dev's Terms of Service. Stay informed about our policies on user privacy and service provision.
+- [ ] [Privacy Center | daily.dev](https://daily-dev-clone-enetwarch.vercel.app/privacy): Privacy Center of daily.dev. Users may be subject to different protection standards and broader standards may therefore apply to some. In order to learn more about the protection criteria, Users can refer to the applicable section.
+- [x] [Page Not Found (404) | daily.dev](https://daily-dev-clone-enetwarch.vercel.app/not-found)
 
 > [!NOTE]
 > These are the cloned pages I chose because they all have the same styling. Other pages of [Daily.dev](https://daily.dev/) have different styling which is why I won't be including them in this clone.

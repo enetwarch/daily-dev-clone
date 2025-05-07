@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import type React from "react";
 
 export default function Footer(): React.ReactNode {
@@ -11,9 +13,9 @@ export default function Footer(): React.ReactNode {
         >
           <div className="max-w-[500px] flex flex-col gap-6">
             <div className="flex justify-start xs:justify-center lg:justify-start">
-              <a href="/" title="Home">
+              <Link href="/" title="Home">
                 <Image src="/daily-dev.svg" alt="Logo" width={150} height={75} />
-              </a>
+              </Link>
             </div>
             <p className="opacity-50 text-lg font-poppins text-left xs:text-center lg:text-left">
               daily.dev is a professional network for developers to learn, collaborate, and grow together.

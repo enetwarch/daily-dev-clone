@@ -10,9 +10,7 @@ import { Open_Sans, Poppins } from "next/font/google";
 import type React from "react";
 
 export const metadata: Metadata = {
-  title: "daily.dev | Where developers suffer together",
-  description:
-    "daily.dev is the open-source professional network developers deserve. Get free access to unlimited amounts of quality knowledge from all over the web every day.",
+  title: "Daily.dev",
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.png",
@@ -40,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps): React.ReactNo
     <html lang="en">
       <body className={`${poppins.variable} ${openSans.variable} antialiased min-h-screen flex flex-col items-center`}>
         <Header />
-        <main className="grow flex flex-col items-center w-full pt-32">{children}</main>
+        <main className="flex flex-col items-center w-full">{children}</main>
         <Footer />
       </body>
     </html>

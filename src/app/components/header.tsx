@@ -1,18 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header(): React.ReactNode {
   return (
-    <div className="w-full fixed z-5">
-      <div className="h-5 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)]" />
+    <div className="w-full fixed z-5 pt-4">
       <header className="w-full sm:px-2 flex justify-center">
         <nav
           aria-label="Header Navigation"
           className="rounded-2xl bg-[rgba(0,0,0,0.1)] p-2 sm:pl-4 lg:pl-6 max-w-[1250px] w-full flex 
           justify-between items-center"
         >
-          <a href="/" title="Home">
+          <Link href="/" title="Home">
             <Image src="/daily-dev.svg" alt="Logo" width={150} height={75} />
-          </a>
+          </Link>
           <a
             href="https://tinyurl.com/4z7cmxr6"
             title="Download Chrome Extension"
