@@ -11,7 +11,14 @@ export const metadata: Metadata = {
 
 export default function AboutUs(): React.ReactNode {
   return (
-    <section className="w-full flex justify-center relative overflow-hidden -z-10">
+    <section className="w-full flex justify-center relative overflow-hidden">
+      <div
+        className="fixed right-0 -z-10 translate-y-full lg:translate-y-1/3 lg:translate-x-1/2 2xl:translate-x-1/6 
+        xs:w-[100px] xs:h-[100px] sm:w-[150px] sm:h-[150px] lg:w-[420px] lg:h-[340px] 2xl:w-[500px] 2xl:h-[400px]"
+      >
+        <Image src="/hand-holding-a-u-key.svg" alt={`hand holding a "u" key`} fill className="hidden lg:block" />
+        <Image src="/hand-with-a-u-key.svg" alt={`hand with a "u" key`} fill className="block lg:hidden" />
+      </div>
       <div
         className="pt-36 pb-12 px-4 lg:pb-24 w-full flex flex-col gap-8 relative items-center max-w-[300px] xs:max-w-[400px] 
         md:max-w-[600px] lg:max-w-[800px] overflow-hidden"
@@ -69,7 +76,7 @@ export default function AboutUs(): React.ReactNode {
           {"//"} or something like that. We think. Maybe. Want in?
         </p>
       </div>
-      <div className="absolute bottom-0 h-[600px] w-[1200px] translate-y-1/2">
+      <div className="absolute bottom-0 h-[600px] w-[1200px] translate-y-1/2 pointer-events-none">
         <Image src="/space-bg.svg" alt="space background" fill />
       </div>
     </section>

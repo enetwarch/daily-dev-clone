@@ -36,11 +36,9 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps): React.ReactNode {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${openSans.variable} antialiased min-h-screen flex flex-col items-center relative`}
-      >
+      <body className={`${poppins.variable} ${openSans.variable} antialiased min-h-screen flex flex-col items-center`}>
         <Header />
-        <main className="flex flex-col items-center w-full relative -z-10">{children}</main>
+        <main className="flex flex-col items-center w-full">{children}</main>
         <Footer />
       </body>
     </html>
