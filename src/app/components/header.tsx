@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Header(): React.ReactNode {
   return (
-    <div className="w-full fixed z-5 pt-4">
+    <div className="w-full fixed z-5">
+      <div className="h-4 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)]" />
       <header className="w-full sm:px-2 flex justify-center">
         <nav
           aria-label="Header Navigation"
@@ -19,7 +20,7 @@ export default function Header(): React.ReactNode {
             target="_blank"
             rel="noreferrer"
             className="border border-white bg-transparent py-3 px-6 rounded-xl font-poppins text-foreground
-            hover:cursor-pointer hover:bg-[hsla(0,0%,50%,0.10)] text-[16px]"
+            hover:cursor-pointer hover:bg-[hsla(0,0%,50%,0.10)] text-[16px] text-nowrap"
           >
             <p className="hidden sm:inline">
               <strong className="font-bold">Start reading</strong>

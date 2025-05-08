@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type React from "react";
+import type { ElementType } from "react";
 
 export default function Footer(): React.ReactNode {
   return (
@@ -57,30 +58,56 @@ export default function Footer(): React.ReactNode {
           >
             <ul className="flex flex-col gap-2">
               <NavHeader>Product</NavHeader>
-              <NavLink href="https://tinyurl.com/4z7cmxr6">Chrome extension</NavLink>
-              <NavLink href="https://tinyurl.com/yaawn5ws">Edge add-on</NavLink>
-              <NavLink href="https://tinyurl.com/2zpjak5c">iOS App</NavLink>
-              <NavLink href="https://tinyurl.com/enznpasm">Android App</NavLink>
-              <NavLink href="https://tinyurl.com/25v9xe2u">Web version</NavLink>
-              <NavLink href="https://tinyurl.com/9h8aumt5">Changelog</NavLink>
+              <NavLink href="https://tinyurl.com/4z7cmxr6" blank>
+                Chrome extension
+              </NavLink>
+              <NavLink href="https://tinyurl.com/yaawn5ws" blank>
+                Edge add-on
+              </NavLink>
+              <NavLink href="https://tinyurl.com/2zpjak5c" blank>
+                iOS App
+              </NavLink>
+              <NavLink href="https://tinyurl.com/enznpasm" blank>
+                Android App
+              </NavLink>
+              <NavLink href="https://tinyurl.com/25v9xe2u" blank>
+                Web version
+              </NavLink>
+              <NavLink href="https://tinyurl.com/9h8aumt5" blank>
+                Changelog
+              </NavLink>
               <NavLink href="https://tinyurl.com/ksd6uvwf">Status</NavLink>
             </ul>
             <ul className="flex flex-col gap-2">
               <NavHeader>Community</NavHeader>
-              <NavLink href="https://tinyurl.com/3j5smpsx">Docs</NavLink>
-              <NavLink href="https://tinyurl.com/mr3c844x">Open source</NavLink>
-              <NavLink href="https://tinyurl.com/yr5wea5p">Feature requests</NavLink>
-              <NavLink href="https://tinyurl.com/y495ubzy">Online events</NavLink>
-              <NavLink href="https://tinyurl.com/4ysdc2bt">Swag store</NavLink>
+              <NavLink href="https://tinyurl.com/3j5smpsx" blank>
+                Docs
+              </NavLink>
+              <NavLink href="https://tinyurl.com/mr3c844x" blank>
+                Open source
+              </NavLink>
+              <NavLink href="https://tinyurl.com/yr5wea5p" blank>
+                Feature requests
+              </NavLink>
+              <NavLink href="https://tinyurl.com/y495ubzy" blank>
+                Online events
+              </NavLink>
+              <NavLink href="https://tinyurl.com/4ysdc2bt" blank>
+                Swag store
+              </NavLink>
             </ul>
             <ul className="flex flex-col gap-2">
               <NavHeader>Company</NavHeader>
-              <NavLink href="https://tinyurl.com/mr2hszmb">Careers</NavLink>
-              <NavLink href="https://tinyurl.com/459ddw2v">Blog</NavLink>
-              <NavLink href="https://tinyurl.com/32syjypc">Advertise</NavLink>
-              <NavLink href="https://tinyurl.com/5ajbruyh">Brand book</NavLink>
-              <NavLink href="https://tinyurl.com/mpjze7mu">About us</NavLink>
-              <NavLink href="https://tinyurl.com/593b9uss">Contact</NavLink>
+              <NavLink href="/careers">Careers</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
+              <NavLink href="https://tinyurl.com/32syjypc" blank>
+                Advertise
+              </NavLink>
+              <NavLink href="https://tinyurl.com/5ajbruyh" blank>
+                Brand book
+              </NavLink>
+              <NavLink href="/about-us">About us</NavLink>
+              <NavLink href="/contact">Contact</NavLink>
             </ul>
           </nav>
         </div>
@@ -99,13 +126,13 @@ export default function Footer(): React.ReactNode {
             className="flex items-center lg:justify-end flex-col sm:flex-row-reverse gap-6 sm:gap-0"
           >
             <ul className="flex">
-              <NavLink href="https://tinyurl.com/3zdyv2z4" className="pr-6 sm:pl-6">
+              <NavLink href="/tos" className="pr-6 sm:pl-6">
                 Terms
               </NavLink>
-              <NavLink href="https://tinyurl.com/jhn7bau4" className="px-6 border-x border-x-neutral-600">
+              <NavLink href="/privacy" className="px-6 border-x border-x-neutral-600">
                 Privacy
               </NavLink>
-              <NavLink href="https://tinyurl.com/37wd2px3" className="pl-6">
+              <NavLink href="https://tinyurl.com/37wd2px3" className="pl-6" blank>
                 Guidelines
               </NavLink>
             </ul>
@@ -169,10 +196,12 @@ type NavLinkProps = {
   blank?: boolean;
 };
 
-function NavLink({ href, children, title, className, blank = true }: NavLinkProps): React.ReactNode {
+function NavLink({ href, children, title, className, blank = false }: NavLinkProps): React.ReactNode {
+  const Component: ElementType = blank ? "a" : Link;
+
   return (
     <li>
-      <a
+      <Component
         href={href}
         title={title ? title : typeof children === "string" ? children : undefined}
         target={blank ? "_blank" : undefined}
@@ -186,7 +215,7 @@ function NavLink({ href, children, title, className, blank = true }: NavLinkProp
           .join(" ")}
       >
         {children}
-      </a>
+      </Component>
     </li>
   );
 }

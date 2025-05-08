@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default function Home(): React.ReactNode {
   return (
     <>
-      <div className="fixed top-0 h-4 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)] z-4" />
       <Hero>
         <Lightbox />
       </Hero>

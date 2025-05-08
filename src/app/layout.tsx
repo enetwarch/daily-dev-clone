@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const poppins: NextFontWithVariable = Poppins({
   variable: "--font-poppins",
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "600", "700"],
   subsets: ["latin"],
 });
 
