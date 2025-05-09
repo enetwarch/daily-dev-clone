@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header(): React.ReactNode {
   return (
-    <div className="w-full fixed z-5">
+    <div className="w-full fixed z-10">
       <div className="h-4 w-full bg-background shadow-[0_0_1rem_1rem_var(--background)]" />
       <header className="w-full sm:px-2 flex justify-center">
         <nav
