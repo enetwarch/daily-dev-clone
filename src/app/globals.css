@@ -14,6 +14,8 @@
 :root {
   --background: #0e1217;
   --foreground: #ffffff;
+  --open-sans: "Open Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 body {

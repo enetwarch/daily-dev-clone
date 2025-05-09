@@ -76,7 +76,7 @@ type LinkProps = React.HTMLAttributes<HTMLElement> & {
 export function Link({ href, children, className, ...props }: LinkProps): React.ReactNode {
   return (
     <a
-      className={["!font-open-sans text-lg text-blue-500 break-all hyphens-auto hover:underline font-light", className]
+      className={["font-open-sans text-lg text-blue-500 break-all hyphens-auto hover:underline font-normal", className]
         .filter(Boolean)
         .join(" ")}
       href={href}
