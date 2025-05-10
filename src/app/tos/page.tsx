@@ -17,31 +17,37 @@ import SubscriptionAndPayments from "@/app/tos/components/16-subscription-and-pa
 import RefundPolicy from "@/app/tos/components/17-refund-policy";
 import Miscellaneous from "@/app/tos/components/18-miscellaneous";
 import Introduction from "@/app/tos/components/introduction";
+import TableOfContents from "@/app/tos/components/table-of-contents";
 
 export default function TermsOfService(): React.ReactNode {
   return (
     <>
-      <div className="flex justify-center w-full pt-32 pb-80 px-6 xs:px-16">
-        <div className="flex flex-col max-w-[900px] gap-8">
-          <Introduction />
-          <General />
-          <ScopeOfServiceAndTheLicense />
-          <Registration />
-          <UserObligationsAndRestrictions />
-          <IntellectualProperty />
-          <RepresentationsAndWarranties />
-          <UserContent />
-          <ApplicationContent />
-          <GroupAdmins />
-          <Privacy />
-          <Disclaimer />
-          <LimitationOfLiability />
-          <Indemnification />
-          <ThirdPartyServicesOrContent />
-          <Links />
-          <SubscriptionAndPayments />
-          <RefundPolicy />
-          <Miscellaneous />
+      <div className="flex w-full relative">
+        <div className="sticky left-6 top-30 place-self-start h-screen hidden lg:block">
+          <TableOfContents />
+        </div>
+        <div className="flex justify-center w-full pt-32 pb-80 px-6 xs:px-16">
+          <div className="flex flex-col max-w-[900px] gap-8 2xl:-ml-[250px]">
+            <Introduction />
+            <General />
+            <ScopeOfServiceAndTheLicense />
+            <Registration />
+            <UserObligationsAndRestrictions />
+            <IntellectualProperty />
+            <RepresentationsAndWarranties />
+            <UserContent />
+            <ApplicationContent />
+            <GroupAdmins />
+            <Privacy />
+            <Disclaimer />
+            <LimitationOfLiability />
+            <Indemnification />
+            <ThirdPartyServicesOrContent />
+            <Links />
+            <SubscriptionAndPayments />
+            <RefundPolicy />
+            <Miscellaneous />
+          </div>
         </div>
       </div>
     </>
