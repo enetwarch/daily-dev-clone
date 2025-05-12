@@ -25,7 +25,7 @@ const poppins: NextFontWithVariable = Poppins({
 
 const openSans: NextFontWithVariable = Open_Sans({
   variable: "--font-open-sans",
-  weight: ["400", "600"],
+  weight: ["300", "400", "600"],
   subsets: ["latin"],
 });
 
