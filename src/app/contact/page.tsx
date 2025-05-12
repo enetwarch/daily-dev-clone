@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Contact(): React.ReactNode {
   return (
-    <section className="pt-36 pb-12 lg:pb-24 max-w-[1200px] w-full flex flex-col items-center gap-20 relative overflow-hidden">
+    <section className="pt-36 pb-12 lg:pb-24 max-w-[1400px] w-full flex flex-col items-center gap-20 relative overflow-hidden">
       <div
         className="absolute top-0 z-4 h-[300px] w-[600px] sm:h-[400px] sm:w-[800px] lg:h-[500px] lg:w-[1000px] 
         -translate-y-[50%] xs:-translate-y-[60%] sm:-translate-y-[70%] lg:translate-x-[10%] hidden md:block"
@@ -31,11 +31,11 @@ export default function Contact(): React.ReactNode {
           <span className="text-6xl leading-20">✉️</span>
           <h2 className="font-poppins font-bold text-xl text-center">Email us</h2>
           <p className="font-poppins text-center">
-            <span className="opacity-50">Shoot us an email at </span>
+            <span className="opacity-50 text-blue-200">Shoot us an email at </span>
             <a href="mailto:hi@daily.dev?subject=Hello%20daily.dev!" className="font-open-sans underline opacity-70">
               hi@daily.dev
             </a>
-            <span className="opacity-50"> and we'll get right back to you.</span>
+            <span className="opacity-50 text-blue-200"> and we'll get right back to you.</span>
           </p>
         </article>
         <article
@@ -45,7 +45,7 @@ export default function Contact(): React.ReactNode {
           <span className="text-6xl leading-20">✏️</span>
           <h2 className="font-poppins font-bold text-xl text-center">Give us feedback</h2>
           <p className="font-poppins text-center">
-            <span className="opacity-50">Send us your feedback on our </span>
+            <span className="opacity-50 text-blue-200">Send us your feedback on our </span>
             <a
               href="https://daily.dev/feedback"
               target="_blank"
@@ -62,14 +62,14 @@ export default function Contact(): React.ReactNode {
         >
           <span className="text-6xl leading-20">✉️</span>
           <h2 className="font-poppins font-bold text-xl text-center">Post address</h2>
-          <p className="font-poppins text-center opacity-50">
+          <p className="font-poppins text-center opacity-50 text-blue-200">
             Daily Dev Ltd.
             <br />9 Derech Hatikva Street,
             <br />
             Ganei Tikva, Israel 5591252
             <br />
           </p>
-          <p className="font-poppins text-center opacity-50">📞 +1 (323) 524 2318</p>
+          <p className="font-poppins text-center opacity-50 text-blue-200">📞 +1 (323) 524 2318</p>
         </article>
       </div>
     </section>
