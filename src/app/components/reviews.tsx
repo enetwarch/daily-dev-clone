@@ -2,21 +2,18 @@ import Image from "next/image";
 
 export default function Reviews(): React.ReactNode {
   return (
-    <section aria-label="Reviews Section" className="w-full flex justify-center">
-      <div
-        className="max-w-[1300px] w-full flex grow flex-col items-center gap-8 lg:gap-4 lg:justify-between lg:flex-row
-        py-16 px-8 lg:px-12"
-      >
-        <div className="w-full lg:min-w-[300px] max-w-[550px] flex flex-col items-center lg:items-normal gap-8">
-          <h2 className="text-2xl sm:text-4xl text-center lg:text-left">
+    <section aria-label="Reviews Section" className="flex w-full justify-center">
+      <div className="flex w-full max-w-[1300px] grow flex-col items-center gap-8 px-8 py-16 lg:flex-row lg:justify-between lg:gap-4 lg:px-12">
+        <div className="lg:items-normal flex w-full max-w-[550px] flex-col items-center gap-8 lg:min-w-[300px]">
+          <h2 className="text-center text-2xl sm:text-4xl lg:text-left">
             <span>The world's best developer platform for </span>
-            <strong className="bg-gradient-to-r from-purple-500 to-pink-300 text-transparent bg-clip-text">
+            <strong className="bg-gradient-to-r from-purple-500 to-pink-300 bg-clip-text text-transparent">
               knowledge and community
             </strong>
           </h2>
           <ul
             aria-label="Big tech companies that use daily.dev"
-            className="flex flex-wrap gap-8 items-center justify-center lg:justify-start"
+            className="flex flex-wrap items-center justify-center gap-8 lg:justify-start"
           >
             <li>
               <Image src="/apple-logo.svg" alt="Apple logo" width={27} height={25} />
@@ -35,7 +32,7 @@ export default function Reviews(): React.ReactNode {
             </li>
           </ul>
         </div>
-        <figure className="lg:min-w-[500px] max-w-[500px]">
+        <figure className="max-w-[500px] lg:min-w-[500px]">
           <Image src="/reviews.webp" alt="Developer review statistics" width={500} height={250} />
           <figcaption className="sr-only">
             Trusted by 1,000,000+ Developers, 2,500+ reviews in Chrome Store, 18,000+ stars on GitHub, Product of the

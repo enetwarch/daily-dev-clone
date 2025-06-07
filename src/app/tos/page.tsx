@@ -22,12 +22,12 @@ import TableOfContents from "@/app/tos/components/table-of-contents";
 export default function TermsOfService(): React.ReactNode {
   return (
     <>
-      <div className="flex w-full relative">
-        <div className="sticky left-6 top-30 place-self-start h-screen hidden lg:block">
+      <div className="relative flex w-full">
+        <div className="sticky top-30 left-6 hidden h-screen place-self-start lg:block">
           <TableOfContents />
         </div>
-        <div className="flex justify-center w-full pt-32 pb-80 px-6 xs:px-16">
-          <div className="flex flex-col max-w-[900px] gap-8 2xl:-ml-[250px]">
+        <div className="flex w-full justify-center px-6 xs:px-16 pt-32 pb-80">
+          <div className="2xl:-ml-[250px] flex max-w-[900px] flex-col gap-8">
             <Introduction />
             <General />
             <ScopeOfServiceAndTheLicense />

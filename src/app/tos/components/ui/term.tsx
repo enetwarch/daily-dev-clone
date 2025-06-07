@@ -18,7 +18,7 @@ type HeadingProps = React.HTMLAttributes<HTMLElement> & {
 
 export function Heading({ children, className, ...props }: HeadingProps): React.ReactNode {
   return (
-    <h1 className={["font-open-sans text-4xl font-semibold", className].filter(Boolean).join(" ")} {...props}>
+    <h1 className={["font-open-sans font-semibold text-4xl", className].filter(Boolean).join(" ")} {...props}>
       {children}
     </h1>
   );
@@ -31,7 +31,7 @@ type TLDRProps = React.HTMLAttributes<HTMLElement> & {
 export function TLDR({ children, className, ...props }: TLDRProps): React.ReactNode {
   return (
     <p
-      className={["font-poppins text-sm xs:text-lg font-light py-4 px-6 border-l-4 border-l-purple-400", className]
+      className={["border-l-4 border-l-purple-400 px-6 py-4 font-light font-poppins text-sm xs:text-lg", className]
         .filter(Boolean)
         .join(" ")}
       {...props}
@@ -47,7 +47,7 @@ type ClauseProps = React.HTMLAttributes<HTMLElement> & {
 
 export function Clause({ children, className, ...props }: ClauseProps): React.ReactNode {
   return (
-    <p className={["font-poppins text-lg opacity-90 text-blue-200", className].filter(Boolean).join(" ")} {...props}>
+    <p className={["font-poppins text-blue-200 text-lg opacity-90", className].filter(Boolean).join(" ")} {...props}>
       {children}
     </p>
   );
@@ -60,7 +60,7 @@ type StrongProps = React.HTMLAttributes<HTMLElement> & {
 export function Strong({ children, className, ...props }: StrongProps): React.ReactNode {
   return (
     <strong
-      className={["font-poppins text-lg opacity-90 text-blue-200 font-bold", className].filter(Boolean).join(" ")}
+      className={["font-bold font-poppins text-blue-200 text-lg opacity-90", className].filter(Boolean).join(" ")}
       {...props}
     >
       {children}
@@ -76,7 +76,7 @@ type LinkProps = React.HTMLAttributes<HTMLElement> & {
 export function Link({ href, children, className, ...props }: LinkProps): React.ReactNode {
   return (
     <a
-      className={["font-open-sans text-lg text-blue-500 break-all hyphens-auto hover:underline font-normal", className]
+      className={["hyphens-auto break-all font-normal font-open-sans text-blue-500 text-lg hover:underline", className]
         .filter(Boolean)
         .join(" ")}
       href={href}

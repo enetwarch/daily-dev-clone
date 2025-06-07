@@ -6,24 +6,21 @@ import type { ElementType } from "react";
 
 export default function Footer(): React.ReactNode {
   return (
-    <footer className="border-t border-t-purple-400 w-full bg-background flex justify-center relative z-5 opacity-[99]">
-      <div className="flex flex-col w-full max-w-[1300px] justify-between px-10 sm:px-12 items-center">
-        <div
-          className="w-full py-16 flex gap-16 lg:gap-8 flex-col lg:flex-row items-center lg:items-start 
-          lg:justify-between"
-        >
-          <div className="max-w-[500px] flex flex-col gap-6">
+    <footer className="relative z-5 flex w-full justify-center border-t border-t-purple-400 bg-background opacity-[99]">
+      <div className="flex w-full max-w-[1300px] flex-col items-center justify-between px-10 sm:px-12">
+        <div className="flex w-full flex-col items-center gap-16 py-16 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+          <div className="flex max-w-[500px] flex-col gap-6">
             <div className="flex justify-start xs:justify-center lg:justify-start">
               <Link href="/" title="Home">
                 <Image src="/daily-dev.svg" alt="Logo" width={150} height={75} />
               </Link>
             </div>
-            <p className="opacity-50 text-lg font-poppins text-left xs:text-center lg:text-left">
+            <p className="text-left xs:text-center font-poppins text-lg opacity-50 lg:text-left">
               daily.dev is a professional network for developers to learn, collaborate, and grow together.
             </p>
             <nav
               aria-label="Download Navigation"
-              className="flex gap-4 max-height-50 items-center justify-start xs:justify-center lg:justify-start"
+              className="max-height-50 flex items-center justify-start xs:justify-center gap-4 lg:justify-start"
             >
               <a href="https://tinyurl.com/2zpjak5c" title="App Store" target="_blank" rel="noreferrer">
                 <Image src="/download-on-the-app-store.svg" alt="Download on the App Store" width={170} height={50} />
@@ -33,7 +30,7 @@ export default function Footer(): React.ReactNode {
               </a>
             </nav>
             <nav aria-label="Platform Navigation" className="pt-4">
-              <ul className="flex items-center gap-4 justify-start xs:justify-center lg:justify-start">
+              <ul className="flex items-center justify-start xs:justify-center gap-4 lg:justify-start">
                 <PlatformLink href="https://tinyurl.com/25v9xe2u" title="daily.dev">
                   <PlatformLogo src="/daily-dev-logo.svg" alt="daily.dev logo" size={40} />
                 </PlatformLink>
@@ -54,7 +51,7 @@ export default function Footer(): React.ReactNode {
           </div>
           <nav
             aria-label="Main Navigation"
-            className="flex justify-around gap-12 lg:justify-between w-full lg:w-[450px] flex-col xs:flex-row"
+            className="flex w-full xs:flex-row flex-col justify-around gap-12 lg:w-[450px] lg:justify-between"
           >
             <ul className="flex flex-col gap-2">
               <NavHeader>Product</NavHeader>
@@ -111,25 +108,22 @@ export default function Footer(): React.ReactNode {
             </ul>
           </nav>
         </div>
-        <div
-          className="flex items-center lg:justify-between flex-col lg:flex-row-reverse w-full border-t 
-          border-t-neutral-800 gap-8 lg:gap-0 pt-10 pb-10 sm:pb-16 lg:pb-10"
-        >
-          <div className="flex flex-col lg:justify-end gap-4 lg:gap-2">
-            <p className="font-poppins text-sm opacity-50 text-left xs:text-center lg:text-right">
+        <div className="flex w-full flex-col items-center gap-8 border-t border-t-neutral-800 pt-10 pb-10 sm:pb-16 lg:flex-row-reverse lg:justify-between lg:gap-0 lg:pb-10">
+          <div className="flex flex-col gap-4 lg:justify-end lg:gap-2">
+            <p className="text-left xs:text-center font-poppins text-sm opacity-50 lg:text-right">
               Working remotely wherever we're happiest
             </p>
-            <p className="text-3xl text-left xs:text-center lg:text-right">🇮🇱 🇮🇹 🇵🇭 🇳🇱 🇬🇧 🇭🇷 🇱🇹 🇦🇺 🇵🇱 🇳🇴 🇦🇱 🇵🇹</p>
+            <p className="text-left xs:text-center text-3xl lg:text-right">🇮🇱 🇮🇹 🇵🇭 🇳🇱 🇬🇧 🇭🇷 🇱🇹 🇦🇺 🇵🇱 🇳🇴 🇦🇱 🇵🇹</p>
           </div>
           <nav
             aria-label="Policy Navigation"
-            className="flex items-center lg:justify-end flex-col sm:flex-row-reverse gap-6 sm:gap-0"
+            className="flex flex-col items-center gap-6 sm:flex-row-reverse sm:gap-0 lg:justify-end"
           >
             <ul className="flex">
               <NavLink href="/tos" className="pr-6 sm:pl-6">
                 Terms
               </NavLink>
-              <NavLink href="/privacy" className="px-6 border-x border-x-neutral-600">
+              <NavLink href="/privacy" className="border-x border-x-neutral-600 px-6">
                 Privacy
               </NavLink>
               <NavLink href="https://tinyurl.com/37wd2px3" className="pl-6" blank>
@@ -179,10 +173,7 @@ type NavHeaderProps = {
 
 function NavHeader({ children }: NavHeaderProps): React.ReactNode {
   return (
-    <h1
-      className="font-poppins font-bold bg-gradient-to-r from-purple-500 to-purple-400 text-transparent 
-      bg-clip-text text-lg pb-2"
-    >
+    <h1 className="bg-gradient-to-r from-purple-500 to-purple-400 bg-clip-text pb-2 font-bold font-poppins text-lg text-transparent">
       {children}
     </h1>
   );
@@ -207,8 +198,8 @@ function NavLink({ href, children, title, className, blank = false }: NavLinkPro
         target={blank ? "_blank" : undefined}
         rel={blank ? "noreferrer" : undefined}
         className={[
-          "opacity-50 hover:opacity-100 active:opacity-100 hover:decoration-solid active:decoration-solid",
-          "hover:text-purple-400 active:text-purple-400 hover:underline active:underline text-sm",
+          "opacity-50 hover:decoration-solid hover:opacity-100 active:decoration-solid active:opacity-100",
+          "text-sm hover:text-purple-400 hover:underline active:text-purple-400 active:underline",
           className,
         ]
           .filter(Boolean)

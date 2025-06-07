@@ -8,8 +8,8 @@ export default function TableOfContents(): React.ReactNode {
         <Image src="/table-of-contents-icon.svg" alt="Table of conents icon" width={24} height={24} />
         <h1 className="font-poppins">Table of Contents</h1>
       </div>
-      <nav aria-label="Table of Contents" className="py-2 w-[250px]">
-        <ul className="flex flex-col gap-1 w-full">
+      <nav aria-label="Table of Contents" className="w-[250px] py-2">
+        <ul className="flex w-full flex-col gap-1">
           <Fragment href={`#${ID.GENERAL}`}>1. General</Fragment>
           <Fragment href={`#${ID.SCOPE_OF_SERVICE_AND_THE_LICENSE}`}>2. Scope of Service & The License</Fragment>
           <Fragment href={`#${ID.REGISTRATION}`}>3. Registration</Fragment>
@@ -41,8 +41,8 @@ type FragmentProps = React.HTMLAttributes<HTMLElement> & {
 
 function Fragment({ href, children, ...props }: FragmentProps): React.ReactNode {
   return (
-    <li className="rounded-md inline hover:bg-[#0000001f] hover:underline">
-      <a href={href} className="px-4 py-1 font-poppins font-semibold w-full block h-full" {...props}>
+    <li className="inline rounded-md hover:bg-[#0000001f] hover:underline">
+      <a href={href} className="block h-full w-full px-4 py-1 font-poppins font-semibold" {...props}>
         {children}
       </a>
     </li>

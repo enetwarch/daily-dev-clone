@@ -4,7 +4,7 @@ export default function Introduction(): React.ReactNode {
   return (
     <Section>
       <div className="flex flex-col gap-8 pb-2">
-        <h1 className="font-poppins font-bold text-3xl xs:text-4xl">DAILY DEV LTD - TERMS OF SERVICE</h1>
+        <h1 className="font-bold font-poppins text-3xl xs:text-4xl">DAILY DEV LTD - TERMS OF SERVICE</h1>
         <p className="font-poppins italic opacity-60">Last Updated: 11 February 2025</p>
       </div>
       <TLDR>

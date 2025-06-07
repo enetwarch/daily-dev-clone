@@ -10,42 +10,33 @@ export const metadata: Metadata = {
 
 export default function Contact(): React.ReactNode {
   return (
-    <section className="pt-36 pb-12 lg:pb-24 max-w-[1400px] w-full flex flex-col items-center gap-20 relative overflow-hidden">
-      <div
-        className="absolute top-0 z-4 h-[300px] w-[600px] sm:h-[400px] sm:w-[800px] lg:h-[500px] lg:w-[1000px] 
-        -translate-y-[50%] xs:-translate-y-[60%] sm:-translate-y-[70%] lg:translate-x-[10%] hidden md:block"
-      >
+    <section className="relative flex w-full max-w-[1400px] flex-col items-center gap-20 overflow-hidden pt-36 pb-12 lg:pb-24">
+      <div className="-translate-y-[50%] xs:-translate-y-[60%] sm:-translate-y-[70%] absolute top-0 z-4 hidden h-[300px] w-[600px] sm:h-[400px] sm:w-[800px] md:block lg:h-[500px] lg:w-[1000px] lg:translate-x-[10%]">
         <Image src="/space-bg.svg" alt="Space Background" fill className="-z-1" />
       </div>
       <div className="flex flex-col items-center gap-4 xs:gap-6 px-8">
         <h1 className="font-poppins font-semibold text-4xl">Contact us</h1>
-        <p className="font-poppins text-md xs:text-lg sm:text-xl font-light text-center">
+        <p className="text-center font-light font-poppins text-md xs:text-lg sm:text-xl">
           Have any questions? Need to say hi? We'd love to hear from you.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8 lg:gap-24 px-16 md:px-24">
-        <article
-          className="flex flex-col items-center flex-1 max-w-[350px] md:min-h-[300px] pb-8 md:pb-0 
-          gap-4 border-b border-b-teal-400"
-        >
+      <div className="flex w-full flex-col items-center justify-between gap-8 px-16 md:flex-row md:px-24 lg:gap-24">
+        <article className="flex max-w-[350px] flex-1 flex-col items-center gap-4 border-b border-b-teal-400 pb-8 md:min-h-[300px] md:pb-0">
           <span className="text-6xl leading-20">✉️</span>
-          <h2 className="font-poppins font-bold text-xl text-center">Email us</h2>
-          <address className="font-poppins text-center">
-            <span className="opacity-50 text-blue-200">Shoot us an email at </span>
+          <h2 className="text-center font-bold font-poppins text-xl">Email us</h2>
+          <address className="text-center font-poppins">
+            <span className="text-blue-200 opacity-50">Shoot us an email at </span>
             <a href="mailto:hi@daily.dev?subject=Hello%20daily.dev!" className="font-open-sans underline opacity-70">
               hi@daily.dev
             </a>
-            <span className="opacity-50 text-blue-200"> and we'll get right back to you.</span>
+            <span className="text-blue-200 opacity-50"> and we'll get right back to you.</span>
           </address>
         </article>
-        <article
-          className="flex flex-col items-center flex-1 max-w-[350px] md:min-h-[300px] pb-8 md:pb-0 
-          gap-4 border-b border-b-yellow-400"
-        >
+        <article className="flex max-w-[350px] flex-1 flex-col items-center gap-4 border-b border-b-yellow-400 pb-8 md:min-h-[300px] md:pb-0">
           <span className="text-6xl leading-20">✏️</span>
-          <h2 className="font-poppins font-bold text-xl text-center">Give us feedback</h2>
-          <address className="font-poppins text-center">
-            <span className="opacity-50 text-blue-200">Send us your feedback on our </span>
+          <h2 className="text-center font-bold font-poppins text-xl">Give us feedback</h2>
+          <address className="text-center font-poppins">
+            <span className="text-blue-200 opacity-50">Send us your feedback on our </span>
             <a
               href="https://daily.dev/feedback"
               target="_blank"
@@ -56,20 +47,17 @@ export default function Contact(): React.ReactNode {
             </a>
           </address>
         </article>
-        <article
-          className="flex flex-col items-center flex-1 max-w-[350px] md:min-h-[300px] pb-8 md:pb-0 
-          gap-4 border-b border-b-purple-400 w-full"
-        >
+        <article className="flex w-full max-w-[350px] flex-1 flex-col items-center gap-4 border-b border-b-purple-400 pb-8 md:min-h-[300px] md:pb-0">
           <span className="text-6xl leading-20">✉️</span>
-          <h2 className="font-poppins font-bold text-xl text-center">Post address</h2>
-          <address className="font-poppins text-center opacity-50 text-blue-200">
+          <h2 className="text-center font-bold font-poppins text-xl">Post address</h2>
+          <address className="text-center font-poppins text-blue-200 opacity-50">
             Daily Dev Ltd.
             <br />9 Derech Hatikva Street,
             <br />
             Ganei Tikva, Israel 5591252
             <br />
           </address>
-          <p className="font-poppins text-center opacity-50 text-blue-200">📞 +1 (323) 524 2318</p>
+          <p className="text-center font-poppins text-blue-200 opacity-50">📞 +1 (323) 524 2318</p>
         </article>
       </div>
     </section>

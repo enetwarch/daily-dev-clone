@@ -57,11 +57,10 @@ export default function Lightbox(): React.ReactNode {
         <button
           type="button"
           aria-haspopup="dialog"
-          className="rounded-t-xl shadow-[0_0_1rem_1rem_#2e389f] hover:cursor-pointer relative object-fill flex 
-          justify-center overflow-visible bg-[#2e389f]"
+          className="relative flex justify-center overflow-visible rounded-t-xl bg-[#2e389f] object-fill shadow-[0_0_1rem_1rem_#2e389f] hover:cursor-pointer"
           onClick={() => setOpen(true)}
         >
-          <div className="absolute top-[0] -translate-y-2/5 h-[120px] w-[120px] sm:h-[160px] sm:w-[160px]">
+          <div className="-translate-y-2/5 absolute top-[0] h-[120px] w-[120px] sm:h-[160px] sm:w-[160px]">
             <Image src="/play-button.svg" alt="Play Button" fill />
           </div>
           <Image
@@ -69,21 +68,21 @@ export default function Lightbox(): React.ReactNode {
             alt="Desktop View"
             width={1000}
             height={500}
-            className="rounded-t-xl hidden lg:inline-block"
+            className="hidden rounded-t-xl lg:inline-block"
           />
           <Image
             src="/lightbox-tablet.webp"
             alt="Tablet View"
             width={750}
             height={572}
-            className="rounded-t-xl hidden sm:inline-block lg:hidden"
+            className="hidden rounded-t-xl sm:inline-block lg:hidden"
           />
           <Image
             src="/lightbox-mobile.webp"
             alt="Mobile View"
             width={400}
             height={400}
-            className="rounded-t-xl inline-block sm:hidden"
+            className="inline-block rounded-t-xl sm:hidden"
           />
         </button>
         <figcaption className="sr-only">Different daily.dev viewports.</figcaption>
@@ -92,19 +91,17 @@ export default function Lightbox(): React.ReactNode {
         ref={dialog}
         aria-modal="true"
         aria-labelledby="lightboxDialogHeading"
-        className="fixed min-w-screen min-h-screen z-10 bg-transparent justify-center items-center duration-1000 
-        transition-opacity backdrop:bg-[hsl(0,0%,0%,0.8)]"
+        className="fixed z-10 min-h-screen min-w-screen items-center justify-center bg-transparent transition-opacity duration-1000 backdrop:bg-[hsl(0,0%,0%,0.8)]"
       >
         <button
           type="button"
           aria-label="Close Lightbox"
-          className="absolute top-8 right-8 text-foreground opacity-70 text-2xl font-bold hover:cursor-pointer h-8 w-8
-          flex justify-center items-center text-center hover:opacity-100 transition-opacity"
+          className="absolute top-8 right-8 flex h-8 w-8 items-center justify-center text-center font-bold text-2xl text-foreground opacity-70 transition-opacity hover:cursor-pointer hover:opacity-100"
           onClick={() => setOpen(false)}
         >
           ✕
         </button>
-        <div className="absolute w-full h-auto aspect-video max-w-[1000px] px-4">
+        <div className="absolute aspect-video h-auto w-full max-w-[1000px] px-4">
           <h1 id="lightboxDialogHeading" className="sr-only">
             daily.dev web app - All-in-on developer news reader YouTube Video
           </h1>
@@ -115,7 +112,7 @@ export default function Lightbox(): React.ReactNode {
             referrerPolicy="strict-origin-when-cross-origin"
             loading="lazy"
             allowFullScreen
-            className="w-full h-full"
+            className="h-full w-full"
           />
         </div>
       </dialog>
